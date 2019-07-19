@@ -184,10 +184,9 @@ css_hide_errors <- function(){
 
 #' Leaflet full screen
 #'
-#' @param x A number of the percentage vertical height
 #' @return a shiny tag.
 #' @export
-css_leaflet_full <- function(x = 100){
+css_leaflet_full <- function(){
   css_add(glue("
 .leaflet {{height: calc(100vh) !important;}}
 .leaflet-control-layers {{margin-top: 60px !important;}}
