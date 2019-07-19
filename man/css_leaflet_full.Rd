@@ -4,10 +4,7 @@
 \alias{css_leaflet_full}
 \title{Leaflet full screen}
 \usage{
-css_leaflet_full(x = 100)
-}
-\arguments{
-\item{x}{A number of the percentage vertical height}
+css_leaflet_full()
 }
 \value{
 a shiny tag.
