@@ -52,10 +52,10 @@ select_input_x <- function(id, label = "Select sites:", choices,
 info <- function(id, label, help, label_size = "15px", 
                  help_size = "12px", icon_size = "15px",
                  ns = NS(NULL), ...){
-  check_string(id)
-  check_string(label)
-  check_string(help)
-  check_function(ns)
+  chk_string(id)
+  chk_string(label)
+  chk_string(help)
+  chk_function(ns)
   
   tagList(
     inline(label_size(label, label_size)),

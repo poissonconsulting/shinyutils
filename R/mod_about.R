@@ -21,7 +21,7 @@ mod_about_ui <- function(id, package = "shinyutils", header = poisson_header(pac
                          footer = poisson_footer(), ...){
   ns <- NS(id)
   
-  check_string(id)
+  chk_string(id)
   check_taglist(header)
   check_taglist(citation)
   check_taglist(footer)

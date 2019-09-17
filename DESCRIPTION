@@ -1,7 +1,9 @@
 Package: shinyutils
 Title: Shiny Utils
 Version: 0.0.0.9000
-Authors@R: person('Seb', 'Dalgarno', email = 'seb@poissonconsulting.ca', role = c('cre', 'aut'))
+Authors@R: c(
+    person("Sebastian", "Dalgarno", , "seb@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-3658-4517"))
+    )
 Description: An R package with utility functions for building shiny apps.
 Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
@@ -10,8 +12,7 @@ LazyData: true
 Imports: 
     shiny,
     glue,
-    checkr,
-    shinydashboard
+    chk
 RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
 URL: https://github.com/poissonconsulting/shinyutils

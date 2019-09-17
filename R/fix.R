@@ -1,6 +1,5 @@
 # Fix UI
 #' @title fix_ui and fix_server
-#' @descriptionServer and ui components to generate fix text.
 #'
 #' @param fix A character string of the fix text.
 #' @param condition_name A character string of the condition name or, if add_output_ns = FALSE, JS code evaluating a condition (with no server side component).
@@ -18,8 +17,8 @@
 fix_ui <- function(fix, condition_name, ns = NS(NULL), add_output_ns = TRUE,
                    fix_size = "13px", ...){
 
-  check_string(fix)
-  check_string(condition_name)
+  chk_string(fix)
+  chk_string(condition_name)
 
   if(isTRUE(add_output_ns))
     condition_name <- paste(glue("output['{ns(condition_name)}']"))

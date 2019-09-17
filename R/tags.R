@@ -47,10 +47,10 @@ help_size <- function(x, font_size = "13px"){
 #' @return a shiny tag.
 #' @export
 button <- function(id, label, icon, status){
-  check_string(id)
-  check_string(label)
-  check_string(icon)
-  check_vector(status, c("success", "primary", "secondary",
+  chk_string(id)
+  chk_string(label)
+  chk_string(icon)
+  chk_vector(status, c("success", "primary", "secondary",
                          "danger", "info", "warning", 
                          "light", "dark"))
   tags$button(id = id, 
