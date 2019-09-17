@@ -11,7 +11,6 @@
 #' @rdname mod_demo
 #'
 #' @keywords internal
-#' @importFrom shiny NS tagList 
 mod_demo_ui <- function(id){
   ns <- NS(id)
   tagList(
