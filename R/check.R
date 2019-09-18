@@ -1,5 +1,5 @@
 check_taglist <- function(x){
-  chk_is(x, "shiny.tag.list")
+  chk_s3_class(x, "shiny.tag.list")
 }
 
 check_package_name <- function(package){

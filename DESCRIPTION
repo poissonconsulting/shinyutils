@@ -4,6 +4,7 @@ Version: 0.0.0.9000
 Authors@R: c(
     person("Sebastian", "Dalgarno", , "seb@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-3658-4517"))
     )
+Date: 2019-09-17
 Description: An R package with utility functions for building shiny apps.
 Depends: R (>= 3.5.0)
 License: MIT + file LICENSE

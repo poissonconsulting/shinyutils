@@ -4,7 +4,8 @@
 \alias{slack_bot}
 \title{Pretty slack bot message}
 \usage{
-slack_bot(..., channel, username, incoming_webhook_url)
+slack_bot(..., channel = "feedback", username = "feedback app",
+  icon_emoji = "", incoming_webhook_url = "webhook")
 }
 \arguments{
 \item{...}{An expression.}
@@ -12,6 +13,8 @@ slack_bot(..., channel, username, incoming_webhook_url)
 \item{channel}{A character string of the channel name.}
 
 \item{username}{A character string of the username.}
+
+\item{icon_emoji}{A character string of the icon emoji.}
 
 \item{incoming_webhook_url}{A character string of the incoming webhook url.}
 }

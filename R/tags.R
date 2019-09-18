@@ -50,7 +50,7 @@ button <- function(id, label, icon, status){
   chk_string(id)
   chk_string(label)
   chk_string(icon)
-  chk_vector(status, c("success", "primary", "secondary",
+  chk_subset(status, c("success", "primary", "secondary",
                          "danger", "info", "warning", 
                          "light", "dark"))
   tags$button(id = id, 

@@ -5,19 +5,28 @@
 #' @param ... An expression.
 #' @param channel A character string of the channel name.
 #' @param username A character string of the username. 
+#' @param icon_emoji A character string of the icon emoji. 
 #' @param incoming_webhook_url A character string of the incoming webhook url. 
 #' @return TRUE
 #' @export
 #' 
-slack_bot <- function(..., channel, username, incoming_webhook_url) {
+slack_bot <- function(...,
+                        channel = "feedback",
+                        username = "feedback app",
+                        icon_emoji = "",
+                        incoming_webhook_url = "webhook") {
   
-  chk_string(channel)
-  chk_string(username)
-  chk_string(incoming_webhook_url)
+  if (incoming_webhook_url == "") {
+    stop("No incoming webhook URL specified. Did you forget to call slackr_setup()?", call. = FALSE)
+  }
+  
+  if (icon_emoji != "") { icon_emoji <- sprintf(', "icon_emoji": "%s"', icon_emoji)  }
   
   resp_ret <- ""
   
   if (!missing(...)) {
+    
+    # mimics capture.output
     
     # get the arglist
     args <- substitute(list(...))[-1L]
@@ -82,10 +91,10 @@ slack_bot <- function(..., channel, username, incoming_webhook_url) {
     on.exit(Sys.setlocale("LC_CTYPE", loc))
     
     resp <- httr::POST(url = incoming_webhook_url, encode = "form",
-                       httr::add_headers(`Content-Type` = "application/x-www-form-urlencoded",
-                                         Accept = "*/*"), body = utils::URLencode(sprintf("payload={\"channel\": \"%s\", \"username\": \"%s\", \"text\": \"%s\"%s}",
-                                                                                          channel, username, output)))
+                 httr::add_headers(`Content-Type` = "application/x-www-form-urlencoded",
+                             Accept = "*/*"), body = utils::URLencode(sprintf("payload={\"channel\": \"%s\", \"username\": \"%s\", \"text\": \"%s\"%s}",
+                                                                       channel, username, output, icon_emoji)))
     httr::warn_for_status(resp)
   }
-  return(invisible())
+  return(TRUE)
 }

@@ -18,7 +18,9 @@ test_that("tag size works", {
 
 test_that("button works", {
   expect_is(button("hi", "hi", "file", "success"), "shiny.tag")
-  expect_error(button("hi", "hi", "file", "failure"), "status can only include values 'danger', 'dark', 'info', 'light', 'primary', 'secondary', 'success' or 'warning'")
+  expect_error(button("hi", "hi", "file", "failure"),
+               "`status` must match 'danger', 'dark', 'info', 'light', 'primary', 'secondary', 'success' or 'warning', not 'failure'.",
+               class = "chk_error")
 })
 
 
