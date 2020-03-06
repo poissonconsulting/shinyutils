@@ -21,7 +21,7 @@ css_navbar <- function(text_color = "#E0E0E0", text_selected_color = "#37CBA2",
 .navbar.navbar-default.navbar-static-top{{
   padding:0;
   margin-bottom: 0px;
-  background: rgba(16,16,16, 0.85);
+  background: {background_color};
 }}
 .navbar-default {{
     box-shadow: 0 4px 4px -2px rgba(0,0,0,.2);
