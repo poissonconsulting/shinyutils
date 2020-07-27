@@ -14,8 +14,12 @@ knitr::opts_chunk$set(
 ```
 # shinyutils
 
- [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+<!-- badges: start -->
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![R build status](https://github.com/poissonconsulting/shinyutils/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/shinyutils/actions)
+[![Codecov test coverage](https://codecov.io/gh/poissonconsulting/shinyutils/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/shinyutils?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+<!-- badges: end -->
 
 `shinyutils` provides utility functions for building shiny apps.
 
@@ -23,9 +27,9 @@ knitr::opts_chunk$set(
 
 You can install the released version of shinyutils from github with:
 
-``` r
-drat::addRepo("poissonconsulting")
-install.packages("shinyutils")
+```r
+# install.packages("remotes")
+remotes::install_github("poissonconsulting/shinyutils")
 ```
 
 ## Code of Conduct
