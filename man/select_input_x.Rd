@@ -4,8 +4,13 @@
 \alias{select_input_x}
 \title{Select input with x}
 \usage{
-select_input_x(id, label = "Select sites:", choices,
-  selected = choices[1], ...)
+select_input_x(
+  id,
+  label = "Select sites:",
+  choices,
+  selected = choices[1],
+  ...
+)
 }
 \arguments{
 \item{id}{A character string of the shiny id.}

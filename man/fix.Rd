@@ -5,8 +5,14 @@
 \alias{fix_server}
 \title{fix_ui and fix_server}
 \usage{
-fix_ui(fix, condition_name, ns = NS(NULL), add_output_ns = TRUE,
-  fix_size = "13px", ...)
+fix_ui(
+  fix,
+  condition_name,
+  ns = NS(NULL),
+  add_output_ns = TRUE,
+  fix_size = "13px",
+  ...
+)
 
 fix_server(output, condition_name, condition)
 }

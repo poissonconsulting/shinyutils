@@ -4,8 +4,13 @@
 \alias{slack_bot}
 \title{Pretty slack bot message}
 \usage{
-slack_bot(..., channel = "feedback", username = "feedback app",
-  icon_emoji = "", incoming_webhook_url = "webhook")
+slack_bot(
+  ...,
+  channel = "feedback",
+  username = "feedback app",
+  icon_emoji = "",
+  incoming_webhook_url = "webhook"
+)
 }
 \arguments{
 \item{...}{An expression.}

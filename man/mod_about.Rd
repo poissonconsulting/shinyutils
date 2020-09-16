@@ -5,9 +5,14 @@
 \alias{mod_about_server}
 \title{mod_about_ui and mod_about_server}
 \usage{
-mod_about_ui(id, package = "shinyutils",
+mod_about_ui(
+  id,
+  package = "shinyutils",
   header = poisson_header(package),
-  citation = poisson_citation(package), footer = poisson_footer(), ...)
+  citation = poisson_citation(package),
+  footer = poisson_footer(),
+  ...
+)
 
 mod_about_server(input, output, session)
 }

@@ -4,9 +4,13 @@
 \alias{css_body}
 \title{Body css}
 \usage{
-css_body(font_family = "Myriad-Pro, Calibri, Arial, 'sans serif'",
-  font_weight = "100", font_size_body = "10px",
-  font_size_label = "13px", text_color = "#494949")
+css_body(
+  font_family = "Myriad-Pro, Calibri, Arial, 'sans serif'",
+  font_weight = "100",
+  font_size_body = "10px",
+  font_size_label = "13px",
+  text_color = "#494949"
+)
 }
 \arguments{
 \item{font_family}{A character string of body font family.}

@@ -4,12 +4,7 @@
 \alias{dev_prep}
 \title{Prepare package to run app during development}
 \usage{
-dev_prep(rm_all = TRUE, detach_all = TRUE)
-}
-\arguments{
-\item{rm_all}{A flag indicating whether to remove objects from Global environment.}
-
-\item{detach_all}{A flag indicating whether to detach packages.}
+dev_prep()
 }
 \value{
 TRUE

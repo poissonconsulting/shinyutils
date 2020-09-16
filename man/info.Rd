@@ -4,8 +4,16 @@
 \alias{info}
 \title{Info text appear when icon clicked}
 \usage{
-info(id, label, help, label_size = "15px", help_size = "12px",
-  icon_size = "15px", ns = NS(NULL), ...)
+info(
+  id,
+  label,
+  help,
+  label_size = "15px",
+  help_size = "12px",
+  icon_size = "15px",
+  ns = NS(NULL),
+  ...
+)
 }
 \arguments{
 \item{id}{A character string of the shiny id.}

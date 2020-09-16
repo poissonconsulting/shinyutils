@@ -4,8 +4,13 @@
 \alias{css_navbar}
 \title{Navbar css}
 \usage{
-css_navbar(text_color = "#E0E0E0", text_selected_color = "#37CBA2",
-  text_size = "15px", background_color = "#010101", float = "right")
+css_navbar(
+  text_color = "#E0E0E0",
+  text_selected_color = "#37CBA2",
+  text_size = "15px",
+  background_color = "#010101",
+  float = "right"
+)
 }
 \arguments{
 \item{text_color}{A character string of navbar text color.}
