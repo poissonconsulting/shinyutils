@@ -117,9 +117,14 @@
     <p>A shiny Module to generate About tab.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>mod_about_ui</span>(<span class='kw'>id</span>, package = <span class='st'>"shinyutils"</span>,
+    <pre class="usage"><span class='fu'>mod_about_ui</span>(
+  <span class='kw'>id</span>,
+  package = <span class='st'>"shinyutils"</span>,
   header = <span class='fu'><a href='poisson_header.html'>poisson_header</a></span>(<span class='kw'>package</span>),
-  citation = <span class='fu'><a href='poisson_citation.html'>poisson_citation</a></span>(<span class='kw'>package</span>), footer = <span class='fu'><a href='poisson_footer.html'>poisson_footer</a></span>(), <span class='kw'>...</span>)
+  citation = <span class='fu'><a href='poisson_citation.html'>poisson_citation</a></span>(<span class='kw'>package</span>),
+  footer = <span class='fu'><a href='poisson_footer.html'>poisson_footer</a></span>(),
+  <span class='kw'>...</span>
+)
 
 <span class='fu'>mod_about_server</span>(<span class='kw'>input</span>, <span class='kw'>output</span>, <span class='kw'>session</span>)</pre>
 
