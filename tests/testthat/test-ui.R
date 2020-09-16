@@ -1,5 +1,3 @@
-context("ui tests")
-
 test_that("info works", {
   expect_is(info("hi", label = "test", help = "help"), "shiny.tag.list")
 })

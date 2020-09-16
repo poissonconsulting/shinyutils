@@ -1,5 +1,3 @@
-context("utils tests")
-
 test_that("function works", {
   expect_is(css_add("hi"), "shiny.tag")
   expect_is(repo_ref("shinyutils"), "shiny.tag")

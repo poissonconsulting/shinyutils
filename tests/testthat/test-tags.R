@@ -1,5 +1,3 @@
-context("tag tests")
-
 test_that("tag size works", {
   x <- p_size("hi", font_size = "20px")
   expect_is(x, "shiny.tag")
