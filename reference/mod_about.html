@@ -45,6 +45,8 @@
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -79,19 +81,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/poissonconsulting/shinyutils/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -117,16 +113,16 @@
     <p>A shiny Module to generate About tab.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>mod_about_ui</span>(
-  <span class='kw'>id</span>,
-  package = <span class='st'>"shinyutils"</span>,
-  header = <span class='fu'><a href='poisson_header.html'>poisson_header</a></span>(<span class='kw'>package</span>),
-  citation = <span class='fu'><a href='poisson_citation.html'>poisson_citation</a></span>(<span class='kw'>package</span>),
-  footer = <span class='fu'><a href='poisson_footer.html'>poisson_footer</a></span>(),
-  <span class='kw'>...</span>
-)
+    <pre class="usage"><span class='fu'>mod_about_ui</span><span class='op'>(</span>
+  <span class='va'>id</span>,
+  package <span class='op'>=</span> <span class='st'>"shinyutils"</span>,
+  header <span class='op'>=</span> <span class='fu'><a href='poisson_header.html'>poisson_header</a></span><span class='op'>(</span><span class='va'>package</span><span class='op'>)</span>,
+  citation <span class='op'>=</span> <span class='fu'><a href='poisson_citation.html'>poisson_citation</a></span><span class='op'>(</span><span class='va'>package</span><span class='op'>)</span>,
+  footer <span class='op'>=</span> <span class='fu'><a href='poisson_footer.html'>poisson_footer</a></span><span class='op'>(</span><span class='op'>)</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span>
 
-<span class='fu'>mod_about_server</span>(<span class='kw'>input</span>, <span class='kw'>output</span>, <span class='kw'>session</span>)</pre>
+<span class='fu'>mod_about_server</span><span class='op'>(</span><span class='va'>input</span>, <span class='va'>output</span>, <span class='va'>session</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
