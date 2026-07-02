@@ -1,6 +1,8 @@
-pandoc: 2.7.3
-pkgdown: 1.9000.9000.9000
-pkgdown_sha: 344a0d36ad5ffdc73abfc021d8e5ca16c4b7190f
+pandoc: 3.8.3
+pkgdown: 2.2.0
+pkgdown_sha: ~
 articles: {}
-last_built: 2021-11-12T23:08Z
-
+last_built: 2026-07-02T00:15Z
+urls:
+  reference: https://poissonconsulting.github.io/shinyutils/reference
+  article: https://poissonconsulting.github.io/shinyutils/articles
