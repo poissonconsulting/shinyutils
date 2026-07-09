@@ -16,16 +16,21 @@
 #'
 #' @keywords internal
 #' @export
-mod_about_ui <- function(id, package = "shinyutils", header = poisson_header(package), 
-                         citation = poisson_citation(package),
-                         footer = poisson_footer(), ...){
+mod_about_ui <- function(
+  id,
+  package = "shinyutils",
+  header = poisson_header(package),
+  citation = poisson_citation(package),
+  footer = poisson_footer(),
+  ...
+) {
   ns <- NS(id)
-  
+
   chk_string(id)
   check_taglist(header)
   check_taglist(citation)
   check_taglist(footer)
-  
+
   tagList(
     header,
     br(),
@@ -41,7 +46,7 @@ mod_about_ui <- function(id, package = "shinyutils", header = poisson_header(pac
 #' @export
 #' @keywords internal
 
-mod_about_server <- function(input, output, session){
+mod_about_server <- function(input, output, session) {
   ns <- session$ns
 }
 
@@ -54,12 +59,10 @@ mod_about_server <- function(input, output, session){
 #'
 #' @return a shiny taglist.
 #' @export
-poisson_header <- function(package = "shinyutils"){
+poisson_header <- function(package = "shinyutils") {
   check_package_name(package)
   body <- h6("For more information see the ", repo_ref(package), "GitHub page.")
-  tagList(h4("Welcome!"),
-          br(),
-          body)
+  tagList(h4("Welcome!"), br(), body)
 }
 
 #' Poisson package citation
@@ -70,10 +73,10 @@ poisson_header <- function(package = "shinyutils"){
 #'
 #' @return a shiny taglist.
 #' @export
-poisson_citation <- function(package = "shinyutils"){
+poisson_citation <- function(package = "shinyutils") {
   check_package_name(package)
   cit <- format_citation(package)
-  if(length(cit) > 0){
+  if (length(cit) > 0) {
     return(tagList(
       h6("Citation:"),
       tags$cite(cit)
@@ -88,14 +91,22 @@ poisson_citation <- function(package = "shinyutils"){
 #'
 #' @return a shiny taglist.
 #' @export
-poisson_footer <- function(){
+poisson_footer <- function() {
   tagList(
-    h6("Developed by", a("Poisson Consulting Ltd.", 
-                         href = glue('http://www.poissonconsulting.ca'))),
-    tags$footer(img(src = 'https://www.poissonconsulting.ca/img/poisson.png',
-                    height = 177/5,
-                    width = 739/5),
-              style = "position: relative;
+    h6(
+      "Developed by",
+      a(
+        "Poisson Consulting Ltd.",
+        href = glue('http://www.poissonconsulting.ca')
+      )
+    ),
+    tags$footer(
+      img(
+        src = 'https://www.poissonconsulting.ca/img/poisson.png',
+        height = 177 / 5,
+        width = 739 / 5
+      ),
+      style = "position: relative;
                 bottom:1;
                 width:100%;
                 height:50px; /* Height of the footer */
@@ -103,6 +114,7 @@ poisson_footer <- function(){
                 padding: 10px;
                 background-color: white;
                 z-index: -1000;
-                font-size: 12px"))
+                font-size: 12px"
+    )
+  )
 }
-

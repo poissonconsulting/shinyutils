@@ -14,19 +14,26 @@
 #'
 #' @keywords internal
 #' @export
-fix_ui <- function(fix, condition_name, ns = NS(NULL), add_output_ns = TRUE,
-                   fix_size = "13px", ...){
-
+fix_ui <- function(
+  fix,
+  condition_name,
+  ns = NS(NULL),
+  add_output_ns = TRUE,
+  fix_size = "13px",
+  ...
+) {
   chk_string(fix)
   chk_string(condition_name)
 
-  if(isTRUE(add_output_ns))
+  if (isTRUE(add_output_ns)) {
     condition_name <- paste(glue("output['{ns(condition_name)}']"))
+  }
 
   print(condition_name)
   conditionalPanel(
     condition = condition_name,
-    fix_text(fix, fix_size), ...
+    fix_text(fix, fix_size),
+    ...
   )
 }
 
@@ -36,7 +43,7 @@ fix_ui <- function(fix, condition_name, ns = NS(NULL), add_output_ns = TRUE,
 #' @export
 #' @keywords internal
 #'
-fix_server <- function(output, condition_name, condition){
+fix_server <- function(output, condition_name, condition) {
   output[[condition_name]] <- condition
   outputOptions(output, condition_name, suspendWhenHidden = FALSE)
 }

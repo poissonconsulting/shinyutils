@@ -1,5 +1,5 @@
 # Module UI
-  
+
 #' @title   mod_demo_ui and mod_demo_server
 #' @description  A shiny Module.
 #'
@@ -11,27 +11,36 @@
 #' @rdname mod_demo
 #'
 #' @keywords internal
-mod_demo_ui <- function(id){
+mod_demo_ui <- function(id) {
   ns <- NS(id)
   tagList(
     wellPanel(
-      tags$cite("info('info', label = 'need help?',
-           help = 'here's some help', ns = ns)", style = "font-size: 15px;"),
+      tags$cite(
+        "info('info', label = 'need help?',
+           help = 'here's some help', ns = ns)",
+        style = "font-size: 15px;"
+      ),
       br(),
       br(),
-        info("info", label = "need help?",
-             help = "here's some help", ns = ns)
+      info("info", label = "need help?", help = "here's some help", ns = ns)
     ),
     br(),
     wellPanel(
-      tags$cite("select_input_x('select', label = 'Dropdown with x', 
-                choices = c('one', 'another'))", style = "font-size: 15px;"),
+      tags$cite(
+        "select_input_x('select', label = 'Dropdown with x', 
+                choices = c('one', 'another'))",
+        style = "font-size: 15px;"
+      ),
       br(),
       br(),
-      select_input_x('select', label = "Dropdown with x", choices = c("one", "another"))
+      select_input_x(
+        'select',
+        label = "Dropdown with x",
+        choices = c("one", "another")
+      )
     )
     # wellPanel(
-    #   tags$cite("fix('fix', fix = 'cannot say hi!', condition = 'input.text == 'hi'", 
+    #   tags$cite("fix('fix', fix = 'cannot say hi!', condition = 'input.text == 'hi'",
     #             style = "font-size: 15px;"),
     #   br(), br(),
     #   textInput(ns("text"), label = NULL, placeholder = "type hi"),
@@ -39,13 +48,12 @@ mod_demo_ui <- function(id){
     # )
   )
 }
-    
+
 # Module Server
-    
+
 #' @rdname mod_demo
 #' @keywords internal
-    
-mod_demo_server <- function(input, output, session){
+
+mod_demo_server <- function(input, output, session) {
   ns <- session$ns
 }
- 

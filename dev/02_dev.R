@@ -1,13 +1,13 @@
 # Building a Prod-Ready, Robust Shiny Application.
-# 
-# Each step is optional. 
-# 
+#
+# Each step is optional.
+#
 
 # 2. All along your project
 
 ## 2.1 Add modules
 
-golem::add_module( name = "my_other_module") # Name of the module 
+golem::add_module(name = "my_other_module") # Name of the module
 
 ## 2.2 Add dependencies
 

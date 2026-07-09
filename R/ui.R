@@ -8,10 +8,19 @@
 
 #' @return a shiny tag.
 #' @export
-value_box <- function(subtitle, value, color = "green", font_size = "70%", ...){
-  valueBox(subtitle = p_size(subtitle, font_size), 
-           color = color, 
-           value = p_size(value, font_size), ...)
+value_box <- function(
+  subtitle,
+  value,
+  color = "green",
+  font_size = "70%",
+  ...
+) {
+  valueBox(
+    subtitle = p_size(subtitle, font_size),
+    color = color,
+    value = p_size(value, font_size),
+    ...
+  )
 }
 
 #' Select input with x
@@ -23,17 +32,26 @@ value_box <- function(subtitle, value, color = "green", font_size = "70%", ...){
 #' @param ... arguments passed to selectizeInput
 #' @return a shiny tag.
 #' @export
-select_input_x <- function(id, label = "Select sites:", choices, 
-                           selected = choices[1], ...) {
-  selectizeInput(inputId = id, 
-                 multiple = TRUE,
-                 label = label,
-                 choices = choices,
-                 selected = selected,
-                 options = list(
-                   'plugins' = list('remove_button'),
-                   'create' = TRUE,
-                   'persist' = FALSE), ...)
+select_input_x <- function(
+  id,
+  label = "Select sites:",
+  choices,
+  selected = choices[1],
+  ...
+) {
+  selectizeInput(
+    inputId = id,
+    multiple = TRUE,
+    label = label,
+    choices = choices,
+    selected = selected,
+    options = list(
+      'plugins' = list('remove_button'),
+      'create' = TRUE,
+      'persist' = FALSE
+    ),
+    ...
+  )
 }
 
 #' Info text appear when icon clicked
@@ -49,23 +67,34 @@ select_input_x <- function(id, label = "Select sites:", choices,
 #' @return a shiny taglist
 #'
 #' @export
-info <- function(id, label, help, label_size = "15px", 
-                 help_size = "12px", icon_size = "15px",
-                 ns = NS(NULL), ...){
+info <- function(
+  id,
+  label,
+  help,
+  label_size = "15px",
+  help_size = "12px",
+  icon_size = "15px",
+  ns = NS(NULL),
+  ...
+) {
   chk_string(id)
   chk_string(label)
   chk_string(help)
   chk_function(ns)
-  
+
   tagList(
     inline(label_size(label, label_size)),
-    inline(actionLink(ns(id), icon = icon("info-circle"), label = NULL,
-                      style = glue("font-size: {icon_size};"), ...)),
+    inline(actionLink(
+      ns(id),
+      icon = icon("info-circle"),
+      label = NULL,
+      style = glue("font-size: {icon_size};"),
+      ...
+    )),
     conditionalPanel(
       condition = glue("input.{id} % 2 == 1"),
-      help_size(help, help_size), ns = ns
+      help_size(help, help_size),
+      ns = ns
     )
   )
 }
-
-
