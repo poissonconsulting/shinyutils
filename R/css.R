@@ -7,10 +7,15 @@
 #' @param float A character string indicating position of tabs in navbar ('left', 'right' or 'center')
 #' @return a shiny tag.
 #' @export
-css_navbar <- function(text_color = "#E0E0E0", text_selected_color = "#37CBA2",
-                       text_size = "15px",
-                       background_color = "#010101", float = "right"){
-  css_add(glue("
+css_navbar <- function(
+  text_color = "#E0E0E0",
+  text_selected_color = "#37CBA2",
+  text_size = "15px",
+  background_color = "#010101",
+  float = "right"
+) {
+  css_add(glue(
+    "
 .navbar .navbar-nav {{float: {float};
 }}
 
@@ -109,7 +114,8 @@ css_navbar <- function(text_color = "#E0E0E0", text_selected_color = "#37CBA2",
   color: {text_color};
 }}
 
-"))
+"
+  ))
 }
 
 #' Slider css
@@ -118,9 +124,9 @@ css_navbar <- function(text_color = "#E0E0E0", text_selected_color = "#37CBA2",
 #' @param background_color A character string of slider background color.
 #' @return a shiny tag.
 #' @export
-css_slider <- function(slider_color = "#494949", 
-                       background_color = "#101010"){
-  css_add(glue("
+css_slider <- function(slider_color = "#494949", background_color = "#101010") {
+  css_add(glue(
+    "
 .irs-bar {{
   width: 100%; height: 5px; background:{background_color};
   border: 1px solid {background_color};
@@ -139,7 +145,8 @@ css_slider <- function(slider_color = "#494949",
 .irs-from {{color: {slider_color}; background: transparent;}}
 .irs-to {{color: {slider_color}; background: transparent;}}
 .irs-slider {{width: 15px; height: 15px; top: 20px;}}
-"))
+"
+  ))
 }
 
 #' Body css
@@ -151,12 +158,15 @@ css_slider <- function(slider_color = "#494949",
 #' @param text_color A character string of body text color.
 #' @return a shiny tag.
 #' @export
-css_body <- function(font_family = "Myriad-Pro, Calibri, Arial, 'sans serif'", 
-                       font_weight = "100",
-                       font_size_body = "10px",
-                     font_size_label = "13px",
-                     text_color = "#494949"){
-  css_add(glue("
+css_body <- function(
+  font_family = "Myriad-Pro, Calibri, Arial, 'sans serif'",
+  font_weight = "100",
+  font_size_body = "10px",
+  font_size_label = "13px",
+  text_color = "#494949"
+) {
+  css_add(glue(
+    "
 body, label, input, button, select {{ 
   font-family: {font_family};
   font-weight: {font_weight};
@@ -168,27 +178,32 @@ label {{
 }}
 h1, h2, h3, h4 {{font-weight: {font_weight};}}
 button {{background-color: #999999;}}
-"))
+"
+  ))
 }
 
 #' Hide error css
 #'
 #' @return a shiny tag.
 #' @export
-css_hide_errors <- function(){
-  css_add(glue("
+css_hide_errors <- function() {
+  css_add(glue(
+    "
 .shiny-output-error {{ visibility: hidden; }}
 .shiny-output-error:before {{ visibility: hidden;}}
-"))
+"
+  ))
 }
 
 #' Leaflet full screen
 #'
 #' @return a shiny tag.
 #' @export
-css_leaflet_full <- function(){
-  css_add(glue("
+css_leaflet_full <- function() {
+  css_add(glue(
+    "
 .leaflet {{height: calc(100vh) !important;}}
 .leaflet-control-layers {{margin-top: 60px !important;}}
-"))
+"
+  ))
 }

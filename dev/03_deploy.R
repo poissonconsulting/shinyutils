@@ -1,7 +1,7 @@
 # Building a Prod-Ready, Robust Shiny Application.
-# 
-# Each step is optional. 
-# 
+#
+# Each step is optional.
+#
 
 # 4. Test my package
 
