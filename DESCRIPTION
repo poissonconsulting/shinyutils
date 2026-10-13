@@ -1,7 +1,7 @@
 Package: shinyutils
 Title: Shiny Utils
-Version: 0.0.0.9001
-Date: 2026-07-18
+Version: 0.0.0.9002
+Date: 2026-10-13
 Authors@R: 
     person(given = "Sebastian",
            family = "Dalgarno",
